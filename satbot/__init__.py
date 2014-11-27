@@ -10,7 +10,7 @@ Note that only Spektrum brand DSMX satellite receivers have been tested to-date,
 receivers should work, possibly with additional fiddling.
 
 ``satbot`` was created with embedded systems like the `Raspberry Pi <http://www.raspberrypi.org/>`_ in mind, but all
-that is really needed is a serial-usb dongle.
+that is really needed is a TTL serial-usb cable (such as `this one <http://www.adafruit.com/product/954>`_.
 
 Assuming your satellite receiver is already bound to your transmitter and you've connected it via a USB dongle it
 should be possible to simply:
