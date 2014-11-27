@@ -23,6 +23,7 @@ setup(
     url='https://github.com/stnbu/satbot',
     download_url='https://github.com/stnbu/satbot/archive/master.zip',
     license='MIT',
+    requires=['daemon', 'pyserial'],
     classifiers=[
         'Development Status :: 4 - Beta',
         'License :: OSI Approved :: MIT License',
