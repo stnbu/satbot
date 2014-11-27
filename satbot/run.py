@@ -104,6 +104,3 @@ def run():
         start(args)
     else:
         raise ValueError('Unknown subcommand "{0}"'.format(args.mode))
-
-if __name__ == '__main__':
-    run()
