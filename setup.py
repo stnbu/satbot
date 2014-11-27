@@ -35,4 +35,9 @@ setup(
     #keywords=['configuration', 'registry', 'refactor'],
     #test_suite='nose.collector',
     #test_requires=['nose'],
+    entry_points={
+        'console_scripts': [
+            'satbot = satbot.run:run',
+        ],
+        'gui_script': []},
 )

@@ -1,6 +1,9 @@
+# -*- coding: utf-8 -*-
+
 import os
 import sys
 import imp
+
 
 class Axis(object):
 
@@ -37,6 +40,7 @@ _default_data = {
     5: Axis(name='flaps', min=164, max=725),
     6: Axis(name='UNUSED', min=164, max=725),
 }
+
 
 def get_user_data():
     user_calibration_path = os.path.expanduser(os.path.join('~', '.dsm', 'calibration.py'))

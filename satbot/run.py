@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import os
 import sys
 import daemon
@@ -10,8 +12,10 @@ from main import do_dsm
 
 DEFAULT_OUT_PATH = os.path.join(os.path.sep, 'tmp', '.dsm')
 
+
 def get_pid_path(args):
     return os.path.join(args.out_dir, 'pid')
+
 
 def get_log_path(args):
     return os.path.join(args.out_dir, 'log')
@@ -85,6 +89,7 @@ def stop(args):
     except Exception:
         if args.force:
             os.kill(int(open(get_pid_path(args), 'r').read()), SIGKILL)
+
 
 def run():
 

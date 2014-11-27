@@ -1,8 +1,11 @@
+# -*- coding: utf-8 -*-
+
 import sys
 import serial
 import curses
 import calibration
 import random
+
 
 def get_channel_data(bytes):
     for index, byte in enumerate(bytes):
@@ -23,6 +26,7 @@ def normalize_channel_data(data):
             yield channel_id, axis.get_normalized_position(position)
         except KeyError:
             print >>sys.stderr, "got unknown channel id: {0}".format(channel_id)
+
 
 class Handler(object):
     """Should have __call__, setup, and cleanup methods.
@@ -53,6 +57,7 @@ class CursesVisualizer(Handler):
     def cleanup(self):
         curses.endwin()
 
+
 class Visualizer(Handler):
 
     def __call__(self, channel_data):
@@ -61,6 +66,7 @@ class Visualizer(Handler):
         for _, position in channel_data:
             print position,
         print ''
+
 
 def do_dsm(port, handler=Visualizer()):
 
@@ -90,7 +96,6 @@ def do_dsm(port, handler=Visualizer()):
                 if channel_data != last_channel_data:
                     handler(channel_data)
                 last_channnel_data = channel_data
-
 
             except KeyboardInterrupt:
                 break
