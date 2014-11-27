@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-
 satbot Overview
 ***************
 
@@ -15,8 +14,6 @@ that is really needed is a TTL serial-usb cable (such as `this one <http://www.a
 
 Assuming your satellite receiver is already bound to your transmitter and you've connected it via a USB dongle it
 should be possible to simply:
-
-.. code-block:: sh
 
     satbot start --foreground /dev/ttysXXX
 
